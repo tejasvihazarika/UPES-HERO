@@ -3,7 +3,10 @@ body {
     padding: 0;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
-
+html {
+    scroll-behavior: smooth;
+  }
+  
 header {
     background-color: black;
 }
