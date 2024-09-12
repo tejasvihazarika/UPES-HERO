@@ -290,7 +290,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    color: #f0a500;
+    color: white;
 }
 
 .footer-left,
@@ -329,6 +329,9 @@ footer {
         gap: 20px;
         justify-content: center;
         align-content: center;
+    }
+    .slider-wrapper {
+        max-width: 100%; 
     }
 }
 
@@ -369,6 +372,9 @@ footer {
 
     .iconn {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .slider-wrapper {
+        max-width: 100%; 
     }
 }
 
