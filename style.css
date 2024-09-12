@@ -1,11 +1,11 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header {
-    background-color: #183883;
+    background-color: black;
 }
 
 .navbar {
@@ -51,7 +51,7 @@ header {
 .video-background {
     position: relative;
     width: 100%;
-    height: 86vh; /* Full viewport height */
+    height: 100vh; 
     overflow: hidden;
 }
 
@@ -72,15 +72,66 @@ header {
     z-index: 1;
     color: white;
     text-align: center;
-    top: 50%;
+    top: 30%;
     transform: translateY(-50%);
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    font-weight: lighter;
 }
+
+.grad{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0.7) 40%,rgba(0, 0, 0, 0.05) 90%);
+    z-index: 0;
+}
+
 
 h1 {
-    font-size: 3rem;
+    font-weight: bold;
+    font-size: 70px; 
+    line-height: 1.2; 
+    letter-spacing: 2px; 
 }
 
-p {
-    font-size: 1.5rem;
+.small-text {
+    font-size: 40px; 
+    letter-spacing: 1px;
+}
+.grid-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    background-color: black;
+    padding-bottom: 30px;
 }
 
+.grid1 {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.grid1 > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.section-divider {
+    border: 0;
+    height: 2px;
+    background: white;
+    width: 80%;
+    margin-bottom: 20px; /* Adds space below the line */
+}
