@@ -146,7 +146,7 @@ h1 {
 .fl {
     display: flex;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     flex: 0 1 30%; 
     margin-bottom: -1%;
     box-sizing: border-box; 
