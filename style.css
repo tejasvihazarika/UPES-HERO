@@ -53,7 +53,6 @@ header {
 }
 
 .nav-links a:hover {
-    /* color: #f0a500; */
     background-color: antiquewhite;
     border-radius: 10px;
     color: black;
@@ -175,6 +174,7 @@ h1 {
 
 h3 {
     margin-bottom: 0;
+    text-align: center;
 }
 
 .fl1 > .fl > p {
@@ -484,4 +484,41 @@ footer {
     .item3, .item4,.item5,.item6{
         display: none;
     }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-links li {
+    opacity: 0; 
+    animation: fadeIn 1s forwards; 
+}
+
+.nav-links li:nth-child(1) {
+    animation-delay: 0.5s; 
+}
+
+.nav-links li:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.nav-links li:nth-child(3) {
+    animation-delay: 1.5s;
+}
+
+.content h1, .content h1 .small-text {
+    opacity: 0; 
+    animation: fadeIn 1s forwards;
+}
+
+.content h1 {
+    animation-delay: 0.5s; 
 }
