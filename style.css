@@ -407,7 +407,9 @@ footer {
         flex-direction: row;
         gap: 10px;
     }
-
+    .nav-links li {
+        font-size: 15px;
+    }
     .logo {
         height: 80px;
     }
@@ -456,7 +458,10 @@ footer {
         flex-direction: column;
         gap: 10px;
     }
-
+    .nav-links li {
+        font-size: 13px;
+        
+    }
     .iconn {
         grid-template-columns: 1fr 1fr;
         margin: auto;
