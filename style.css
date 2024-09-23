@@ -486,6 +486,13 @@ footer {
 .pic{
     text-align: center;
 }
+.pic > p{
+    margin-top: -2%;
+    font-size: 15px;
+}
+.pic > h4{
+    font-size: 20px;
+}
 .pic > img:hover{
     transform: scale(1.1);
 }
