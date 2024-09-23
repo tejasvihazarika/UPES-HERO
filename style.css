@@ -456,7 +456,7 @@ footer {
     padding: 20px;
     border-radius: 10px;
     transition: height 0.5s ease; 
-    height: 33%; 
+    height: 20%; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -466,7 +466,7 @@ footer {
 .sname-text:hover{
     background-color: rgba(112, 128, 144, 0.9);
     transition: height 1s ease;
-    height: 50%;
+    height: 70%;
 }
 /* .foot{
     display: flex;
