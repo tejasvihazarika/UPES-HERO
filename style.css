@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: EB Garamond;
+    font-family: Open Sans;
 }
 p{
     font-size: 18px;
@@ -386,6 +386,109 @@ footer {
     z-index: 0;
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); 
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.nav-links li {
+    opacity: 0; 
+    animation: fadeIn 1s forwards; 
+}
+
+.nav-links li:nth-child(1) {
+    animation-delay: 0.5s; 
+}
+
+.nav-links li:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.nav-links li:nth-child(3) {
+    animation-delay: 1.5s;
+}
+.nav-links li:nth-child(4) {
+    animation-delay: 2s;
+}
+.nav-links li:nth-child(5) {
+    animation-delay: 2.5s;
+}
+
+.content h1, .content h1 .small-text {
+    opacity: 0; 
+    animation: fadeIn 1s forwards;
+}
+
+.content h1 {
+    animation-delay: 0.2s; 
+}
+
+.scontainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.sname {
+    position: relative;
+    text-align: center;
+    color: white;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom: 2%;
+}
+
+
+.sname-text {
+    padding: 20px;
+    border-radius: 10px;
+    transition: height 0.5s ease; 
+    height: 33%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: rgba(112, 128, 144, 0.8);
+}
+.sname-text:hover{
+    background-color: rgba(112, 128, 144, 0.9);
+    transition: height 1s ease;
+    height: 50%;
+}
+/* .foot{
+    display: flex;
+    gap: 40px;
+    justify-content: space-around;
+
+} */
+.pic-flex{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.pic > img{
+    width: 350px;
+    transition: all 0.3s ease; 
+}
+.pic{
+    text-align: center;
+}
+.pic > img:hover{
+    transform: scale(1.1);
+}
 @media (max-width: 1200px) {
     .grid1 {
         gap: 20px;
@@ -440,6 +543,12 @@ footer {
     .slider-wrapper {
         max-width: 100%; 
     }
+    .pic-flex{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -459,7 +568,7 @@ footer {
         gap: 10px;
     }
     .nav-links li {
-        font-size: 13px;
+        font-size: 10px;
         
     }
     .iconn {
@@ -484,41 +593,21 @@ footer {
     .item3, .item4,.item5,.item6{
         display: none;
     }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px); 
+    .sname{
+        width: 80%;
+        justify-content: center;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+    /* .foot{
+        display: flex;
+        flex-wrap: wrap;
     }
-}
-
-.nav-links li {
-    opacity: 0; 
-    animation: fadeIn 1s forwards; 
-}
-
-.nav-links li:nth-child(1) {
-    animation-delay: 0.5s; 
-}
-
-.nav-links li:nth-child(2) {
-    animation-delay: 1s;
-}
-
-.nav-links li:nth-child(3) {
-    animation-delay: 1.5s;
-}
-
-.content h1, .content h1 .small-text {
-    opacity: 0; 
-    animation: fadeIn 1s forwards;
-}
-
-.content h1 {
-    animation-delay: 0.2s; 
+    .foot-text{
+        width: 45%;
+    } */
+    .pic-flex{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
 }
