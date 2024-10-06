@@ -15,18 +15,28 @@
     <header>
         <nav class="navbar" id="navbar">
             <div class="logo-container">
-                <a href="#navbar"><img src="UPES Logo white 1.png" alt="logo" class="logo"></a>
+                <a href="#navbar">
+                    <img src="UPES Logo white 1.png" alt="logo" class="logo">
+                </a>
+            </div>
+            <div class="hamburger-icon">
+                <i class="fas fa-bars" id="hamburger"></i>
             </div>
             <ul class="nav-links" style="font-family: 'Times New Roman', Times, serif;">
                 <li><a href="#why-upes">About</a></li>
                 <li><a href="#campus-life">Campus Life</a></li>
                 <li><a href="#faculty">Faculty</a></li>
-                <!-- <li><a href="#courses">Courses</a></li> -->
-                <!-- <li><a href="#">Faculty</a></li> -->
                 <li><a href="#schools">Our Schools</a></li>
                 <li><a href="#recruiters">Recruiters</a></li>
             </ul>
         </nav>
+        <ul id="mobile-menu" class="hidden">
+            <li><a href="#why-upes">About</a></li>
+            <li><a href="#campus-life">Campus Life</a></li>
+            <li><a href="#faculty">Faculty</a></li>
+            <li><a href="#schools">Our Schools</a></li>
+            <li><a href="#recruiters">Recruiters</a></li>
+        </ul>
     </header>
     <section class="video-background">
         <video autoplay muted loop id="bg-video">
@@ -144,32 +154,38 @@
     </section>
     <section class="faculty" id="faculty">
         <div class="faculty-text">
-            <h2 style="text-align: center; font-size: 50px;">
-                OUR DISTINGUISHED FACULTY
-            </h2>
-            <p style="text-align: center; font-size: 15px;">Our teachers are the source of our Academic Excellence and we at UPES ensure the delivery of higher education of the highest order from some of the best faculty in the world. The university boasts a large number of faculty who are educated from the Premier Institutions of India and abroad, including IITs, NITs, IISc Bangalore, IIMs, and more </p>
+            <h2 style="text-align: center; font-size: 50px;">OUR DISTINGUISHED FACULTY</h2>
+            <p style="text-align: center; font-size: 15px;">
+                Our teachers are the source of our Academic Excellence and we at UPES ensure the delivery of higher education of the highest order from some of the best faculty in the world. 
+                The university boasts a large number of faculty who are educated from the Premier Institutions of India and abroad, including IITs, NITs, IISc Bangalore, IIMs, and more.
+            </p>
         </div>
-        <div class="pic-flex">
-            <div class="pic">
-                <img src="./prof/prof1.webp" alt="">
-                <h4>Dr. Ram K Sharma</h4>
-                <p>Vice Chancellor, UPES</p>
+        
+        <div class="carousel">
+            <div class="carousel-container">
+                <div class="pic">
+                    <img src="./prof/prof1.webp" alt="">
+                    <h4>Dr. Ram K Sharma</h4>
+                    <p>Vice Chancellor, UPES</p>
+                </div>
+                <div class="pic">
+                    <img src="./prof/prof2.webp" alt="">
+                    <h4>Prof. Vijaysekhar Chellaboina</h4>
+                    <p>Dean, School of Computer Science</p>
+                </div>
+                <div class="pic">
+                    <img src="./prof/prof3.webp" alt="">
+                    <h4>Prof. Bhaskar Bhatt</h4>
+                    <p>Dean, School of Design</p>
+                </div>
+                <div class="pic">
+                    <img src="./prof/prof4.webp" alt="">
+                    <h4>Dr. Abhishek Sinha</h4>
+                    <p>Dean, School of Law</p>
+                </div>
             </div>
-            <div class="pic">
-                <img src="./prof/prof2.webp" alt="">
-                <h4>Prof. Vijaysekhar Chellaboina</h4>
-                <p>Dean, School of Computer Science </p>
-            </div>
-            <div class="pic">
-                <img src="./prof/prof3.webp" alt="">
-                <h4>Prof. Bhaskar Bhatt</h4>
-                <p>Dean, School of Design</p>
-            </div>
-            <div class="pic">
-                <img src="./prof/prof4.webp" alt="">
-                <h4>Dr. Abhishek Sinha</h4>
-                <p>Dean, School of Law</p>
-            </div>
+            <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+            <button class="next" onclick="changeSlide(1)">&#10095;</button>
         </div>
     </section>
     <section class="schools" id="schools" style="background-color: black;">
@@ -250,6 +266,32 @@
             <div><img src="recruit/ic20.webp" alt="company logo"></div>
         </div>
     </section>
+    
+    <section class="contact-us-section">
+        <div class="contact-container">
+            <div class="contact-image">
+                <img src="contact.png" alt="Contact Us Image">
+            </div>
+            <div class="contact-form-container">
+                <h2>Contact Us</h2>
+                <form id="contactForm">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name">
+                    <span id="nameError" class="error" style="display:none; color: red;"></span>
+    
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                    <span id="emailError" class="error" style="display:none; color: red;"></span>
+    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message"></textarea>
+                    <span id="messageError" class="error" style="display:none; color: red;"></span>
+    
+                    <button type="submit" >Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
     <!-- <section class="footer1">
         <div class="foot">
             <div class="foot-text">
@@ -288,5 +330,12 @@
         </div>
     </footer>
     
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            var mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('show');
+        });
+    </script>
+    <script src="script.js"></script>
 </body>
 </html>
